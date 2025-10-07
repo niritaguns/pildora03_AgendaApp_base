@@ -10,15 +10,18 @@ public class Company extends Contact {
         this.description = description;
     }
 
-    public String getCompanyName() { return name; }
-    public String getDescription() { return description; }
-
-    public void setCompanyName(String name) { this.name = name; }
-    public void setDescription(String description) { this.description = description; }
-
-    @Override
     public String getName() {
         return name;
+    }
+    public String getDescription() {
+        return description;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+    public void setDescription(String description) {
+        this.description = description;
     }
 }
 

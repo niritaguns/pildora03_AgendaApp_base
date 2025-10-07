@@ -5,27 +5,27 @@ import java.util.List;
 
 public class Group {
     private String name;
-    private final List<Contact> contacts = new ArrayList<>();
+    private List<Contact> contacts;
 
     public Group(String name) {
         this.name = name;
+        this.contacts = new ArrayList<>();
     }
 
     public String getName() { return name; }
-    public void setName(String name) { this.name = name; }
-
-    // k) añadir y l) quitar contactos en el grupo
-    public void addContact(Contact contact) {
-        if (contact != null && !contacts.contains(contact)) {
-            contacts.add(contact);
-        }
-    }
-
-    public boolean removeContact(Contact contact) {
-        return contacts.remove(contact);
+    public void setName(String name) {
+        this.name = name;
     }
 
     public List<Contact> getContacts() {
         return contacts;
+    }
+
+    public void addContact(Contact contact) {
+        contacts.add(contact);
+    }
+
+    public void removeContact(Contact contact) {
+        contacts.remove(contact);
     }
 }
